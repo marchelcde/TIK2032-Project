@@ -1,0 +1,148 @@
+:root {
+  --primary: #2a2a2e;
+  --secondary: #eeeeee;
+  --third: #0a0a0a;
+  --foourth: #929aab;
+}
+
+body {
+  background-color: var(--primary);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 10%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--third);
+  z-index: 999;
+}
+
+.navbar .navbar-logo {
+  position: absolute;
+  left: 10%;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary);
+  font-style: italic;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .navbar-nav a {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--foourth);
+}
+
+.navbar h1 {
+  font-size: 2rem;
+  color: var(--third);
+}
+
+.navbar .navbar-contact {
+  margin: 10px;
+}
+
+.main {
+  text-align: center;
+  margin-top: 25rem;
+  color: var(--secondary);
+  font-size: 25px;
+}
+
+.main p {
+  font-size: 1.5rem;
+  color: var(--foourth);
+}
+
+.main h1 {
+  font-size: 3rem;
+  color: var(--secondary);
+}
+
+.page button {
+  color: var(--secondary);
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid var(--secondary);
+  background: var(--primary);
+  box-shadow: 3px 3px var(--secondary);
+  cursor: pointer;
+  margin: 15px 10px;
+}
+
+.page button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  margin-top: 35px;
+  background-color: var(--primary);
+}
+
+.text-content {
+  font-size: 20px;
+  color: var(--secondary);
+  margin-left: 300px;
+  display: flex;
+  letter-spacing: 2px;
+  flex-direction: column;
+}
+
+.gallery-container-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 100px 0 50px;
+  align-items: center;
+}
+
+.gallery-container-reverse .text-content {
+  margin-left: 0;
+  margin-right: 300px;
+}
+.button-gallery {
+  display: flex;
+  gap: 20px; /* Jarak antar tombol */
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.button-gallery .button-back,
+.button-gallery .button-next {
+  flex: 1; /* Membuat kedua tombol punya lebar yang sama */
+  max-width: 300px;
+  color: var(--foourth);
+  padding: 12px;
+  background: var(--primary);
+  border: 1px solid var(--secondary); /* ini yang benar */
+  border-radius: 6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.image {
+  width: 600px;
+  margin-top: 70px;
+  border-radius: 10px;
+}
