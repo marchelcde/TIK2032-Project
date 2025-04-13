@@ -7,31 +7,35 @@
     <link rel="stylesheet" href="../static/css/style.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <a href="home.html" class="navbar-logo">M<span>M</span></a>
-      <div class="navbar-nav">
-        <a href="home.html">Home</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      \
-    </nav>
+    <div class="page-wrapper">
+      <nav class="navbar">
+        <a href="home.html" class="navbar-logo">M<span>M</span></a>
+        <div class="hamburger" id="hamburger">☰</div>
+        <div class="navbar-nav" id="navbarNav">
+          <a href="home.html">Home</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
 
-    <nav class="main">
-      <h1>Welcome To My Web!</h1>
-      <p>
-        I create beautiful, functional, and responsive websites that help
-        businesses grow and succeed online.
-      </p>
-      <div class="page">
-        <button onclick="window.location.href='gallery.html'">
-          <div class="button">View My Picture !</div>
-        </button>
-        <button onclick="window.location.href='contact.html'">
-          <div class="button">Get In Touch !</div>
-        </button>
+      <div class="main">
+        <h1>Welcome To My Web!</h1>
+        <p>
+          I create beautiful, functional, and responsive websites that help
+          businesses grow and succeed online.
+        </p>
+        <div class="page">
+          <button onclick="window.location.href='gallery.html'">
+            View My Picture!
+          </button>
+          <button onclick="window.location.href='contact.html'">
+            Get In Touch!
+          </button>
+        </div>
       </div>
-    </nav>
+    </div>
+
+    <script src="../static/script/script.js"></script>
   </body>
 </html>
