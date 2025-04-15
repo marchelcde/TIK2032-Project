@@ -11,6 +11,53 @@
   --facebook-hover: #1877f2;
   --white: #ffffff;
   --read-more: #2563eb;
+  --logo: #ffffff;
+}
+
+.light-mode {
+  --primary: #ffffff;
+  --secondary: #1a1a1a;
+  --third: #ffffffff;
+  --fourth: #acaaaa;
+  --twitter: #b3d8f5;
+  --twitter-hover: #1da1f2;
+  --instagram: #f7bfd0;
+  --instagram-hover: #e1306c;
+  --facebook: #b3ccff;
+  --facebook-hover: #1877f2;
+  --white: #000000;
+  --read-more: #1e40af;
+  --logo: #000000;
+}
+
+.theme-switch {
+  margin-left: 1400px;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--third);
+  border: 1px solid var(--third);
+}
+
+.theme-switch svg {
+  fill: var(--secondary);
+}
+.theme-switch svg:first-child {
+  display: none;
+}
+
+.light-mode .theme-switch svg:first-child {
+  display: block;
+}
+
+.light-mode .theme-switch svg:last-child {
+  display: none;
+}
+
+.hamburger {
+  display: none;
 }
 
 html,
@@ -76,6 +123,8 @@ body {
 .navbar .navbar-nav {
   display: flex;
   gap: 2rem;
+  position: absolute;
+  color: var(--secondary);
 }
 
 .navbar .navbar-nav a {
@@ -102,12 +151,18 @@ body {
   color: var(--secondary);
   text-transform: uppercase;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 100px;
   border: 2px solid var(--secondary);
   background: var(--primary);
   box-shadow: 3px 3px var(--secondary);
   cursor: pointer;
   margin: 15px 10px;
+}
+
+.page button:hover {
+  background: var(--secondary);
+  color: var(--primary);
+  box-shadow: 0px 0px var(--primary);
 }
 
 .page button:active {
@@ -157,6 +212,13 @@ body {
   padding: 20px 0;
   background-color: var(--primary);
   margin-top: auto;
+}
+
+.button-function .button-back:hover,
+.button-function .button-next:hover {
+  background: var(--secondary);
+  color: var(--primary);
+  box-shadow: 0px 0px var(--primary);
 }
 
 .button-function .button-back,
@@ -264,7 +326,7 @@ body {
 }
 
 .contact-description {
-  color: #555;
+  color: var(--third);
   font-size: 16px;
   margin-bottom: 30px;
 }
@@ -273,6 +335,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  color: var(--third);
 }
 
 .contact-item {
@@ -284,18 +347,20 @@ body {
   border-radius: 8px;
   font-size: 1.1rem;
   font-weight: 500;
-  color: #444;
+  color: var(--third);
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.contact-item .icon {
+.contact-item svg {
   width: 24px;
   height: 24px;
   transition: transform 0.3s ease;
+  color: var(--third);
+  fill: var(--third);
 }
 
-.contact-item:hover .icon {
+.contact-item:hover svg {
   transform: scale(1.2);
 }
 
@@ -329,10 +394,26 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .theme-switch {
+    margin-top: 10px;
+    right: 70px;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .light-mode .theme-switch svg:first-child {
+    margin-bottom: 10px;
+  }
+
   .navbar {
     justify-content: space-between;
     padding: 2rem 10%;
     position: fixed;
+    color: 1px solid var(--third);
   }
 
   .navbar .navbar-nav {
@@ -343,22 +424,28 @@ body {
     width: 70%;
     height: 100vh;
     background-color: var(--third);
-    display: flex;
+    display: fixed;
     gap: 0;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 4.5rem;
     transition: right 0.3s ease;
     z-index: 998;
+    border: 14x solid var(--third);
   }
 
   .navbar .navbar-nav.show {
     right: 0;
+    border-left: 1px solid var(--secondary);
+    border-right: 1px solid var(--secondary);
   }
 
   .navbar .navbar-nav a {
     padding: 1.2rem;
     font-size: 1.3rem;
-    border-top: 1px solid var(--primary);
+    border-bottom: 1px solid var(--secondary);
+  }
+  .navbar .navbar-nav a:first-child {
+    border-top: 1px solid var(--secondary);
   }
 
   .hamburger {
@@ -372,6 +459,9 @@ body {
     transform: translateY(-50%);
     z-index: 999;
     width: auto;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
   }
   .gallery-container,
   .gallery-container-reverse {
