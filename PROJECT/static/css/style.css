@@ -568,7 +568,8 @@ body {
 
   .contact-wrapper {
     margin: 150px auto 0 auto;
-    width: 90%;
+    width: 100%;
+    height: auto;
   }
 
   .contact-card {
