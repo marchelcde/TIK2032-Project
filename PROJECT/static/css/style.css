@@ -435,11 +435,12 @@ body {
   color: var(--twitter-hover);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .main {
-    position: fixed;
+    position: relative;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    margin-top: 280px;
   }
   .theme-switch {
     margin-top: 10px;
@@ -572,6 +573,7 @@ body {
 
   .contact-card {
     padding: 20px;
+    width: 100%;
   }
 
   .contact-title {
